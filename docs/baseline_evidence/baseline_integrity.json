@@ -1,0 +1,112 @@
+{
+  "recorded_utc": "2026-08-24T15:24:13.295002+07:00",
+  "policy": "create-once integrity lock; source baseline files are read-only experiment inputs",
+  "scenes": {
+    "E2": {
+      "files": {
+        "scene.xml": {
+          "size": 82539,
+          "sha256": "e7e1f7481a3865fbbace7ad048cf3abc0be6ec3cfaa20ed346b3efe4b60d6afd"
+        },
+        "scene_metadata.json": {
+          "size": 6616,
+          "sha256": "2dc45e768e632e9732da96ce387de4d98f1b0c4456c87bee4d0b647967a48fdc"
+        },
+        "mpc_gnb_a.csv": {
+          "size": 87458,
+          "sha256": "917154976a5ce52c2811c18320f7baaabbd50fd3f8a5b4cd4fdb9b7fbd496331"
+        },
+        "mpc_gnb_b.csv": {
+          "size": 381346,
+          "sha256": "9f80c06cbea465e28a7cb9dfef93f0113e7f12da2e54ca505fc6f501adb7a273"
+        },
+        "mpc_gnb_c.csv": {
+          "size": 484884,
+          "sha256": "1d4980d6b36cd2c0cfb5b802abdef52262c9bd69c133dfccc5dec9b694d1d8d1"
+        },
+        "mpc_gnb_d.csv": {
+          "size": 366375,
+          "sha256": "c20d024f16a9f3014c547d5407ce3210b9e5c41ec8950368c0255b9de3599b2d"
+        },
+        "mpc_gnb_e.csv": {
+          "size": 490523,
+          "sha256": "982b9bb6a32060e06f1e7397595f3d2087bbba3660b89d5551ace6bff0834767"
+        },
+        "mpc_gnb_f.csv": {
+          "size": 293405,
+          "sha256": "e53fc696f151e309cbe38002f9697098e3523740b2f4887311538501b2d1f0ca"
+        }
+      },
+      "source_directory_name": "output_do_thi_cau_song_LongBien-GiaLam_full_sionna_final_physics"
+    },
+    "E6": {
+      "files": {
+        "scene.xml": {
+          "size": 9037,
+          "sha256": "8b3847644e84dcd16af04cf10cea914f947c8e4712de25dd502f6f733af770d3"
+        },
+        "scene_metadata.json": {
+          "size": 32200,
+          "sha256": "8fd85e7d4177258d62ee1127cb3e299b78ef82110f0bf4b28dc1876447e36ad4"
+        },
+        "mpc_gnb_a.csv": {
+          "size": 516682,
+          "sha256": "96273a8b95582e1fcb5cbe82fd2128c2d82f68169735580b80ae2d620a27dff8"
+        },
+        "mpc_gnb_b.csv": {
+          "size": 430289,
+          "sha256": "d336d4d6d05f3f7f73ff3717e47a9e9bd1cf1c7c49ae233397218032c6ab8022"
+        },
+        "mpc_gnb_c.csv": {
+          "size": 1930403,
+          "sha256": "ddf4f90f98538aee86419e0f05024300c42aa4fb078d91a2f63a33c35c34024b"
+        },
+        "mpc_gnb_d.csv": {
+          "size": 592017,
+          "sha256": "3f8694e5dcc494aaa9bdde1fe154cf27b37fd51bf2ae3dfda352819edcef28ff"
+        },
+        "mpc_gnb_e.csv": {
+          "size": 2145769,
+          "sha256": "8c7ef8ee683b72645b29217231519ea13717a21b648142e8dc43be1e59ee8ca8"
+        },
+        "mpc_gnb_f.csv": {
+          "size": 2330942,
+          "sha256": "f9d58f0e44448d6f565cf462dba45587064b2a94500cd2d1b89467089b3fa10a"
+        },
+        "mpc_gnb_g.csv": {
+          "size": 1916267,
+          "sha256": "fcf505e1a95d35954de76fbeca9a832a94ee7a2f287059e6e6545076ef05f2f5"
+        },
+        "mpc_gnb_h.csv": {
+          "size": 2557756,
+          "sha256": "ee30d6ca33ab8fe8a0b268a1ead64e013c3ac590e4df2e62cee3ae12ef287f5a"
+        },
+        "mpc_gnb_i.csv": {
+          "size": 2476680,
+          "sha256": "de908c20a3814322c6aedc92e72d40f11c1600090d0459c704aa3f24a6b3371d"
+        },
+        "mpc_gnb_j.csv": {
+          "size": 1747731,
+          "sha256": "5db1e0c6e221be717fbab333e87b1ae4b37360b197a9adf396d9020a23af2a28"
+        },
+        "mpc_gnb_k.csv": {
+          "size": 2673356,
+          "sha256": "8f3017bba67767052cd9d3da8813c4114ecf8778a5e2812375b1459d6cbfc7e4"
+        },
+        "mpc_gnb_l.csv": {
+          "size": 1342028,
+          "sha256": "019f404b993aea50f4a913150509530303f57b4ec918207c51a78f401b56c847"
+        },
+        "mpc_gnb_m.csv": {
+          "size": 414412,
+          "sha256": "fc66fc3ede682bacdeef33f0bc0829e7652751109b7ae100d80c19cc968bbd5c"
+        },
+        "mpc_gnb_n.csv": {
+          "size": 587128,
+          "sha256": "c2aedede9f3e9d1055587bcd8d6bf04716b1fb0bcc353dc4373b998483486a1b"
+        }
+      },
+      "source_directory_name": "output_deo_nui_ven_bien_HaiVanBac-HaiVanNam_full_sionna_final_physics"
+    }
+  }
+}

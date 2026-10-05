@@ -1,0 +1,116 @@
+[
+  {
+    "id": "do_thi_day_dac_GiaiPhong-GiapBat",
+    "terrain_type": "do_thi_day_dac",
+    "start_end": "GiaiPhong-GiapBat",
+    "bbox": [
+      20.97,
+      105.836,
+      20.995,
+      105.846
+    ],
+    "railway_context": "Urban North-South railway corridor through Giai Phong/Giap Bat, Hanoi.",
+    "scientific_role": "Dense urban canyon and high-rise residential/commercial blocks near track; useful for evaluating blockage, rich multipath, street-grid scattering, and trackside gNB placement in a Vietnamese metropolitan corridor.",
+    "blend_file": "vietnam_railway_osm_scenes/do_thi_day_dac_GiaiPhong-GiapBat.blend",
+    "report_file": "vietnam_railway_osm_scenes/do_thi_day_dac_GiaiPhong-GiapBat_report.json",
+    "blend_bytes": 784026,
+    "mesh_count": 382,
+    "building_count": 365,
+    "building_height_max_m": 100.743
+  },
+  {
+    "id": "do_thi_cau_song_LongBien-GiaLam",
+    "terrain_type": "do_thi_cau_song",
+    "start_end": "LongBien-GiaLam",
+    "bbox": [
+      21.03,
+      105.845,
+      21.06,
+      105.875
+    ],
+    "railway_context": "Rail bridge and urban river-crossing corridor over the Red River at Long Bien/Gia Lam, Hanoi.",
+    "scientific_role": "Large river surface, steel bridge structure, open water reflection and dense urban banks; useful for bridge/river multipath and transitions between urban obstruction and open propagation.",
+    "blend_file": "vietnam_railway_osm_scenes/do_thi_cau_song_LongBien-GiaLam.blend",
+    "report_file": "vietnam_railway_osm_scenes/do_thi_cau_song_LongBien-GiaLam_report.json",
+    "blend_bytes": 7203805,
+    "mesh_count": 16080,
+    "building_count": 15907,
+    "building_height_max_m": 71.041
+  },
+  {
+    "id": "dong_bang_cong_nghiep_HaiDuong-PhuThai",
+    "terrain_type": "dong_bang_cong_nghiep",
+    "start_end": "HaiDuong-PhuThai",
+    "bbox": [
+      20.935,
+      106.34,
+      20.975,
+      106.39
+    ],
+    "railway_context": "Hanoi-Haiphong railway through Hai Duong/Phu Thai fringe.",
+    "scientific_role": "Flat Red River delta corridor with railway yards, roads, water channels and sparse/medium buildings; useful as a lower-scatter baseline for delta and industrial/suburban railway environments.",
+    "blend_file": "vietnam_railway_osm_scenes/dong_bang_cong_nghiep_HaiDuong-PhuThai.blend",
+    "report_file": "vietnam_railway_osm_scenes/dong_bang_cong_nghiep_HaiDuong-PhuThai_report.json",
+    "blend_bytes": 368305,
+    "mesh_count": 44,
+    "building_count": 36,
+    "building_height_max_m": 21.066
+  },
+  {
+    "id": "do_thi_cang_bien_HaiPhong-ThuongLy",
+    "terrain_type": "do_thi_cang_bien",
+    "start_end": "HaiPhong-ThuongLy",
+    "bbox": [
+      20.84,
+      106.65,
+      20.88,
+      106.71
+    ],
+    "railway_context": "Urban port-side railway approach around Hai Phong and Thuong Ly.",
+    "scientific_role": "Port city environment with industrial buildings, freight infrastructure, dense roads and water/harbor adjacency; useful for industrial clutter and maritime edge propagation.",
+    "blend_file": "vietnam_railway_osm_scenes/do_thi_cang_bien_HaiPhong-ThuongLy.blend",
+    "report_file": "vietnam_railway_osm_scenes/do_thi_cang_bien_HaiPhong-ThuongLy_report.json",
+    "blend_bytes": 2071782,
+    "mesh_count": 1723,
+    "building_count": 1511,
+    "building_height_max_m": 155.583
+  },
+  {
+    "id": "dam_pha_ven_bien_LangCo-HaiVanBac",
+    "terrain_type": "dam_pha_ven_bien",
+    "start_end": "LangCo-HaiVanBac",
+    "bbox": [
+      16.205,
+      108.03,
+      16.26,
+      108.115
+    ],
+    "railway_context": "North-South railway near Lang Co lagoon and the northern Hai Van approach.",
+    "scientific_role": "Coastal lagoon/open-water adjacency with sparse settlement and rail constrained between water and hills; useful for strong water reflections and low-clutter coastal railway channels.",
+    "blend_file": "vietnam_railway_osm_scenes/dam_pha_ven_bien_LangCo-HaiVanBac.blend",
+    "report_file": "vietnam_railway_osm_scenes/dam_pha_ven_bien_LangCo-HaiVanBac_report.json",
+    "blend_bytes": 191884,
+    "mesh_count": 7,
+    "building_count": 4,
+    "building_height_max_m": 18.159
+  },
+  {
+    "id": "deo_nui_ven_bien_HaiVanBac-HaiVanNam",
+    "terrain_type": "deo_nui_ven_bien",
+    "start_end": "HaiVanBac-HaiVanNam",
+    "bbox": [
+      16.12,
+      108.08,
+      16.225,
+      108.175
+    ],
+    "railway_context": "Hai Van mountain-pass/coastal railway section.",
+    "scientific_role": "Mountain-pass/coastal transition with rail curvature, tunnels/bridges where mapped, forest and sparse built environment; useful for obstruction-dominated and coastal mountain propagation. DEM should be added before final ray tracing because OSM alone is not a terrain elevation source.",
+    "blend_file": "vietnam_railway_osm_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam.blend",
+    "report_file": "vietnam_railway_osm_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam_report.json",
+    "blend_bytes": 607559,
+    "mesh_count": 81,
+    "building_count": 74,
+    "building_height_max_m": 21.679
+  }
+]

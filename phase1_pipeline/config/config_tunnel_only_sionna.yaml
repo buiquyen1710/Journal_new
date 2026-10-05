@@ -1,0 +1,116 @@
+scenario:
+  type: external_loop_3000m
+  name: tunnel_only_existing_vietnam_scene_sionna
+
+external_scene:
+  source_blend: C:/Users/asela/Documents/New project/SioNetRail_loop/phase1_pipeline/repaired_blend/Train_tunnel_only_rt.blend
+  target_min_track_length_m: 3000.0
+  remove_objects_below_area_m2: 7.0
+  trajectory_spacing_m: 50.0
+  place_gnbs_at_scene_corners: true
+  gnb_corner_margin_m: 5.0
+  small_object_keep_keywords: [rail, track, gnb, tx, antenna, tunnel, portal]
+
+export:
+  # Keep the original map. Skip only heavyweight asset families that make OptiX impractical.
+  skip_object_keywords: [Bamboo_1, Bamboo_2, Fruit_tree]
+  max_obj_file_bytes: 30000000
+
+scene:
+  length_m: 3200.0
+  width_m: 1200.0
+
+base_stations:
+  - name: GNB_SW
+    output_name: mpc_gnb_sw
+    position_m: [-600.0, -425.0, 25.0]
+    facing: y+
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_SE
+    output_name: mpc_gnb_se
+    position_m: [412.0, -425.0, 25.0]
+    facing: x-
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_NE
+    output_name: mpc_gnb_ne
+    position_m: [412.0, 242.0, 25.0]
+    facing: y-
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_NW
+    output_name: mpc_gnb_nw
+    position_m: [-600.0, 242.0, 25.0]
+    facing: x+
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 3.8
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 5
+  max_num_paths: 2000
+  samples_per_src: 2500
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: true
+  enable_diffraction: true
+  enable_edge_diffraction: true
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 65.0
+  max_paths_after_filter: 96
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+paths:
+  blend_file: output_tunnel_only_sionna/Train_tunnel_only_sionna.blend
+  mitsuba_xml: output_tunnel_only_sionna/scene.xml
+  mesh_dir: output_tunnel_only_sionna/meshes
+  trace_csv: output_tunnel_only_sionna/ns3_trace.csv
+  trace_csv_pattern: output_tunnel_only_sionna/{station}.csv
+  trace_manifest: output_tunnel_only_sionna/trace_manifest.json
+  doppler_plot: output_tunnel_only_sionna/doppler_vs_time.png
+  doppler_plot_pattern: output_tunnel_only_sionna/{station}_doppler_vs_time.png
+  path_count_plot: output_tunnel_only_sionna/path_count_vs_time.png
+  path_count_plot_pattern: output_tunnel_only_sionna/{station}_path_count_vs_time.png
+  scene_metadata: output_tunnel_only_sionna/scene_metadata.json

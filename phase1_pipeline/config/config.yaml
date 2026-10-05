@@ -1,0 +1,210 @@
+scenario:
+  type: unified_3000m
+  name: unified_3000m_integrated_scene
+
+scene:
+  length_m: 3000.0
+  width_m: 200.0
+
+railway:
+  gauge_m: 1.435
+  rail_height_m: 0.172
+  rail_width_m: 0.07
+  sleeper_spacing_m: 0.6
+  sleeper_dimensions_m: [2.6, 0.28, 0.16]
+
+noise_barriers:
+  center_offset_m: 3.6
+  height_m: 3.5
+  thickness_m: 0.2
+
+catenary:
+  pole_spacing_m: 60.0
+  pole_height_m: 7.0
+  pole_offset_m: 2.5
+  pole_radius_m: 0.15
+  wire_height_m: 5.5
+  wire_radius_m: 0.01
+
+base_stations:
+  - name: TX1
+    output_name: mpc_tx1_viaductA
+    position_m: [350.0, -8.0, 22.0]
+    facing: y+
+    height_m: 22.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: TX2
+    output_name: mpc_tx2_ground
+    position_m: [850.0, -8.0, 10.0]
+    facing: y+
+    height_m: 10.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: TX3
+    output_name: mpc_tx3_tunnel
+    position_m: [1450.0, -4.0, 5.5]
+    facing: y+
+    height_m: 5.5
+    mast_radius_m: 0.18
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.20
+  - name: TX4
+    output_name: mpc_tx4_viaductF
+    position_m: [2450.0, -8.0, 22.0]
+    facing: y+
+    height_m: 22.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: TX5
+    output_name: mpc_tx5_portal
+    position_m: [1100.0, -8.0, 10.0]
+    facing: y+
+    height_m: 10.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 3.8
+  nose_length_m: 4.0
+  bogie_offset_m: 7.0
+  wheel_radius_m: 0.42
+  wheel_width_m: 0.12
+  track_visual_offset_m: 0.7175
+
+trajectory:
+  default_y_m: 0.0
+  segments:
+    - name: module_a
+      x_start_m: 0.0
+      x_end_m: 690.0
+      spacing_m: 1.0
+      z_start_m: 16.2
+      z_end_m: 16.2
+    - name: bridge_to_ground
+      x_start_m: 690.0
+      x_end_m: 710.0
+      spacing_m: 0.5
+      z_start_m: 16.2
+      z_end_m: 4.2
+    - name: module_b
+      x_start_m: 710.0
+      x_end_m: 1100.0
+      spacing_m: 1.0
+      z_start_m: 4.2
+      z_end_m: 4.2
+    - name: module_c
+      x_start_m: 1100.0
+      x_end_m: 1300.0
+      spacing_m: 0.5
+      z_start_m: 4.2
+      z_end_m: 4.2
+    - name: module_d
+      x_start_m: 1300.0
+      x_end_m: 1600.0
+      spacing_m: 1.0
+      z_start_m: 4.2
+      z_end_m: 4.2
+    - name: module_e_dense
+      x_start_m: 1600.0
+      x_end_m: 1750.0
+      spacing_m: 0.5
+      z_start_m: 4.2
+      z_end_m: 4.2
+    - name: module_e_stable
+      x_start_m: 1750.0
+      x_end_m: 1890.0
+      spacing_m: 1.0
+      z_start_m: 4.2
+      z_end_m: 4.2
+    - name: ground_to_bridge
+      x_start_m: 1890.0
+      x_end_m: 1910.0
+      spacing_m: 0.5
+      z_start_m: 4.2
+      z_end_m: 16.2
+    - name: module_f
+      x_start_m: 1910.0
+      x_end_m: 3000.0
+      spacing_m: 1.0
+      z_start_m: 16.2
+      z_end_m: 16.2
+      include_end: true
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 6
+  max_num_paths: 4000
+  samples_per_src: 3000
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: true
+  enable_diffraction: true
+  enable_edge_diffraction: true
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 35.0
+  max_paths_after_filter: 32
+  tunnel_clutter_density: low
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+train_blockage:
+  enabled: true
+  input_trace_csv_pattern: output_unified/{station}.csv
+  output_trace_csv_pattern: output_unified_train_blockage/{station}.csv
+  output_manifest: output_unified_train_blockage/trace_manifest_train_blockage.json
+  summary_json: output_unified_train_blockage/train_blockage_summary.json
+  rx_offset_from_train_front_m: 4.0
+  roof_clearance_m: 0.35
+  lateral_margin_m: 0.10
+  vertical_margin_m: 0.05
+  lookback_distance_m: 80.0
+  los_blockage_loss_db: 22.0
+  nlos_blockage_loss_db: 12.0
+  set_blocked_los_to_nlos: true
+
+paths:
+  blend_file: output_unified/railway_scene_unified.blend
+  mitsuba_xml: output_unified/scene.xml
+  mesh_dir: output_unified/meshes
+  trace_csv: output_unified/ns3_trace.csv
+  trace_csv_pattern: output_unified/{station}.csv
+  trace_manifest: output_unified/trace_manifest.json
+  doppler_plot: output_unified/doppler_vs_time.png
+  doppler_plot_pattern: output_unified/{station}_doppler_vs_time.png
+  path_count_plot: output_unified/path_count_vs_time.png
+  path_count_plot_pattern: output_unified/{station}_path_count_vs_time.png
+  scene_metadata: output_unified/scene_metadata.json

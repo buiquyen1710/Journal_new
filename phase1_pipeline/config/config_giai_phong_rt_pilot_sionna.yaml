@@ -1,0 +1,88 @@
+scenario:
+  type: external_loop_3000m
+  name: giai_phong_giap_bat_osm_rt_pilot
+
+external_scene:
+  source_blend: C:/Users/asela/Documents/New project/SioNetRail_loop/phase1_pipeline/vietnam_railway_osm_scenes/do_thi_day_dac_GiaiPhong-GiapBat.blend
+  trajectory_spacing_m: 150.0
+  read_gnb_positions_from_scene: true
+
+export:
+  max_obj_file_bytes: 30000000
+  skip_curve_objects: true
+  keep_curve_keywords: [RT_Rail, RT_Trajectory]
+
+scene:
+  length_m: 2125.0
+  width_m: 520.0
+
+base_stations:
+  - name: GNB_A
+    output_name: mpc_gnb_a
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 4.3
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 120.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 2
+  max_num_paths: 200
+  samples_per_src: 100
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: false
+  enable_diffraction: false
+  enable_edge_diffraction: false
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 80.0
+  max_paths_after_filter: 64
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+paths:
+  blend_file: output_giai_phong_rt/Train_giai_phong_rt_sionna.blend
+  mitsuba_xml: output_giai_phong_rt_pilot/scene.xml
+  mesh_dir: output_giai_phong_rt_pilot/meshes
+  trace_csv: output_giai_phong_rt_pilot/ns3_trace.csv
+  trace_csv_pattern: output_giai_phong_rt_pilot/{station}.csv
+  trace_manifest: output_giai_phong_rt_pilot/trace_manifest.json
+  doppler_plot: output_giai_phong_rt_pilot/doppler_vs_time.png
+  doppler_plot_pattern: output_giai_phong_rt_pilot/{station}_doppler_vs_time.png
+  path_count_plot: output_giai_phong_rt_pilot/path_count_vs_time.png
+  path_count_plot_pattern: output_giai_phong_rt_pilot/{station}_path_count_vs_time.png
+  scene_metadata: output_giai_phong_rt_pilot/scene_metadata.json

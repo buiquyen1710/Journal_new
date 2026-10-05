@@ -1,0 +1,50 @@
+[
+  {
+    "id": "do_thi_day_dac_GiaiPhong-GiapBat",
+    "terrain_type": "do_thi_day_dac",
+    "start_end": "GiaiPhong-GiapBat",
+    "bbox": [20.970, 105.836, 20.995, 105.846],
+    "railway_context": "Urban North-South railway corridor through Giai Phong/Giap Bat, Hanoi.",
+    "scientific_role": "Dense urban canyon and high-rise residential/commercial blocks near track; useful for evaluating blockage, rich multipath, street-grid scattering, and trackside gNB placement in a Vietnamese metropolitan corridor."
+  },
+  {
+    "id": "do_thi_cau_song_LongBien-GiaLam",
+    "terrain_type": "do_thi_cau_song",
+    "start_end": "LongBien-GiaLam",
+    "bbox": [21.030, 105.845, 21.060, 105.875],
+    "railway_context": "Rail bridge and urban river-crossing corridor over the Red River at Long Bien/Gia Lam, Hanoi.",
+    "scientific_role": "Large river surface, steel bridge structure, open water reflection and dense urban banks; useful for bridge/river multipath and transitions between urban obstruction and open propagation."
+  },
+  {
+    "id": "dong_bang_cong_nghiep_HaiDuong-PhuThai",
+    "terrain_type": "dong_bang_cong_nghiep",
+    "start_end": "HaiDuong-PhuThai",
+    "bbox": [20.935, 106.340, 20.975, 106.390],
+    "railway_context": "Hanoi-Haiphong railway through Hai Duong/Phu Thai fringe.",
+    "scientific_role": "Flat Red River delta corridor with railway yards, roads, water channels and sparse/medium buildings; useful as a lower-scatter baseline for delta and industrial/suburban railway environments."
+  },
+  {
+    "id": "do_thi_cang_bien_HaiPhong-ThuongLy",
+    "terrain_type": "do_thi_cang_bien",
+    "start_end": "HaiPhong-ThuongLy",
+    "bbox": [20.840, 106.650, 20.880, 106.710],
+    "railway_context": "Urban port-side railway approach around Hai Phong and Thuong Ly.",
+    "scientific_role": "Port city environment with industrial buildings, freight infrastructure, dense roads and water/harbor adjacency; useful for industrial clutter and maritime edge propagation."
+  },
+  {
+    "id": "dam_pha_ven_bien_LangCo-HaiVanBac",
+    "terrain_type": "dam_pha_ven_bien",
+    "start_end": "LangCo-HaiVanBac",
+    "bbox": [16.205, 108.030, 16.260, 108.115],
+    "railway_context": "North-South railway near Lang Co lagoon and the northern Hai Van approach.",
+    "scientific_role": "Coastal lagoon/open-water adjacency with sparse settlement and rail constrained between water and hills; useful for strong water reflections and low-clutter coastal railway channels."
+  },
+  {
+    "id": "deo_nui_ven_bien_HaiVanBac-HaiVanNam",
+    "terrain_type": "deo_nui_ven_bien",
+    "start_end": "HaiVanBac-HaiVanNam",
+    "bbox": [16.120, 108.080, 16.225, 108.175],
+    "railway_context": "Hai Van mountain-pass/coastal railway section.",
+    "scientific_role": "Mountain-pass/coastal transition with rail curvature, tunnels/bridges where mapped, forest and sparse built environment; useful for obstruction-dominated and coastal mountain propagation. DEM should be added before final ray tracing because OSM alone is not a terrain elevation source."
+  }
+]

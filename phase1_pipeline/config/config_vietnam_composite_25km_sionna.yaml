@@ -1,0 +1,338 @@
+scenario:
+  type: external_loop_3000m
+  name: vietnam_composite_railway_25km
+
+external_scene:
+  source_blend: C:/Users/asela/Documents/New project/SioNetRail_loop/phase1_pipeline/output_vietnam_composite_rt/vietnam_composite_railway_25km.blend
+  target_min_track_length_m: 25000.0
+  remove_objects_below_area_m2: 2.0
+  trajectory_spacing_m: 50.0
+  place_gnbs_at_scene_corners: false
+  read_gnb_positions_from_scene: true
+  small_object_keep_keywords: [rail, track, gnb, tx, antenna, sleeper, ballast, terrain, dem, water]
+
+export:
+  max_obj_file_bytes: 60000000
+
+scene:
+  length_m: 25000.0
+  width_m: 1800.0
+
+base_stations:
+  - name: GNB_01_do_thi_day_dac_GiaiPhong-GiapBat
+    output_name: mpc_gnb_01
+    position_m: [120.0, -65.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_02_do_thi_day_dac_GiaiPhong-GiapBat
+    output_name: mpc_gnb_02
+    position_m: [810.0, 65.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_03_do_thi_day_dac_GiaiPhong-GiapBat
+    output_name: mpc_gnb_03
+    position_m: [1500.0, -65.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_04_do_thi_day_dac_GiaiPhong-GiapBat
+    output_name: mpc_gnb_04
+    position_m: [2190.0, 65.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_05_do_thi_day_dac_GiaiPhong-GiapBat
+    output_name: mpc_gnb_05
+    position_m: [2880.0, -65.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_06_do_thi_cau_song_LongBien-GiaLam
+    output_name: mpc_gnb_06
+    position_m: [3120.0, -80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_07_do_thi_cau_song_LongBien-GiaLam
+    output_name: mpc_gnb_07
+    position_m: [4040.0, 80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_08_do_thi_cau_song_LongBien-GiaLam
+    output_name: mpc_gnb_08
+    position_m: [4960.0, -80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_09_do_thi_cau_song_LongBien-GiaLam
+    output_name: mpc_gnb_09
+    position_m: [5880.0, 80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_10_dong_bang_cong_nghiep_HaiDuong-PhuThai
+    output_name: mpc_gnb_10
+    position_m: [6120.0, -80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_11_dong_bang_cong_nghiep_HaiDuong-PhuThai
+    output_name: mpc_gnb_11
+    position_m: [7060.0, 80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_12_dong_bang_cong_nghiep_HaiDuong-PhuThai
+    output_name: mpc_gnb_12
+    position_m: [8000.0, -80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_13_dong_bang_cong_nghiep_HaiDuong-PhuThai
+    output_name: mpc_gnb_13
+    position_m: [8940.0, 80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_14_dong_bang_cong_nghiep_HaiDuong-PhuThai
+    output_name: mpc_gnb_14
+    position_m: [9880.0, -80.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_15_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_15
+    position_m: [10120.0, -75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_16_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_16
+    position_m: [10772.0, 75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_17_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_17
+    position_m: [11424.0, -75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_18_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_18
+    position_m: [12076.0, 75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_19_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_19
+    position_m: [12728.0, -75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_20_do_thi_cang_bien_HaiPhong-ThuongLy
+    output_name: mpc_gnb_20
+    position_m: [13380.0, 75.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_21_dam_pha_ven_bien_LangCo-HaiVanBac
+    output_name: mpc_gnb_21
+    position_m: [13620.0, -100.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_22_dam_pha_ven_bien_LangCo-HaiVanBac
+    output_name: mpc_gnb_22
+    position_m: [14873.333, 100.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_23_dam_pha_ven_bien_LangCo-HaiVanBac
+    output_name: mpc_gnb_23
+    position_m: [16126.667, -100.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_24_dam_pha_ven_bien_LangCo-HaiVanBac
+    output_name: mpc_gnb_24
+    position_m: [17380.0, 100.0, 30.0]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_25_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_25
+    position_m: [17620.0, -90.0, 49.133]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_26_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_26
+    position_m: [18657.143, 90.0, 75.602]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_27_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_27
+    position_m: [19694.286, -90.0, 69.572]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_28_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_28
+    position_m: [20731.429, 90.0, 82.173]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_29_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_29
+    position_m: [21768.571, -90.0, 112.717]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_30_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_30
+    position_m: [22805.714, 90.0, 89.965]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_31_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_31
+    position_m: [23842.857, -90.0, 38.28]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_32_deo_nui_ven_bien_HaiVanBac-HaiVanNam
+    output_name: mpc_gnb_32
+    position_m: [24880.0, 90.0, 41.145]
+    facing: auto
+    height_m: 30.0
+    mast_radius_m: 0.35
+    antenna_size_m: [1.0, 0.35, 1.4]
+    ray_origin_clearance_m: 0.35
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 4.2
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 6
+  max_num_paths: 3000
+  samples_per_src: 3500
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: true
+  enable_diffraction: true
+  enable_edge_diffraction: true
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 75.0
+  max_paths_after_filter: 128
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+paths:
+  blend_file: output_vietnam_composite_rt/Train_vietnam_composite_25km_sionna.blend
+  mitsuba_xml: output_vietnam_composite_rt/scene.xml
+  mesh_dir: output_vietnam_composite_rt/meshes
+  trace_csv: output_vietnam_composite_rt/ns3_trace.csv
+  trace_csv_pattern: output_vietnam_composite_rt/{station}.csv
+  trace_manifest: output_vietnam_composite_rt/trace_manifest.json
+  doppler_plot: output_vietnam_composite_rt/doppler_vs_time.png
+  doppler_plot_pattern: output_vietnam_composite_rt/{station}_doppler_vs_time.png
+  path_count_plot: output_vietnam_composite_rt/path_count_vs_time.png
+  path_count_plot_pattern: output_vietnam_composite_rt/{station}_path_count_vs_time.png
+  scene_metadata: output_vietnam_composite_rt/scene_metadata.json

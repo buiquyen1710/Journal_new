@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/buiquyen1710/Journal_new/run-manifest.schema.json",
+  "title": "RUP-CHO HSR experiment run manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["experiment_id", "created_utc", "git_commit", "scene", "trace", "seed", "method", "speed_kmh", "spatial_resolution_m", "status"],
+  "properties": {
+    "experiment_id": {"type": "string", "minLength": 1},
+    "created_utc": {"type": "string", "format": "date-time"},
+    "git_commit": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+    "scene": {
+      "type": "object",
+      "required": ["id", "version", "config_sha256"],
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "string"},
+        "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "trace": {
+      "type": "object",
+      "required": ["provenance", "native_timing"],
+      "properties": {
+        "provenance": {"type": "string"},
+        "native_timing": {"type": "boolean"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "seed": {"type": "integer", "minimum": 0},
+    "method": {"type": "string"},
+    "speed_kmh": {"type": "number", "exclusiveMinimum": 0},
+    "spatial_resolution_m": {"type": "number", "exclusiveMinimum": 0},
+    "status": {"enum": ["planned", "running", "complete", "failed", "invalid"]},
+    "runtime_versions": {"type": "object"},
+    "outputs": {"type": "array", "items": {"type": "object"}}
+  }
+}

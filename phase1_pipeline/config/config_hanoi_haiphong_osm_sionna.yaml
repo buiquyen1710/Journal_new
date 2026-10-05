@@ -1,0 +1,114 @@
+scenario:
+  type: external_loop_3000m
+  name: hanoi_haiphong_osm_rail_3km
+
+external_scene:
+  source_blend: C:/Users/asela/Documents/New project/SioNetRail_loop/phase1_pipeline/output_hanoi_haiphong_osm_rt/source_hanoi_haiphong_osm.blend
+  target_min_track_length_m: 3000.0
+  remove_objects_below_area_m2: 7.0
+  trajectory_spacing_m: 50.0
+  place_gnbs_at_scene_corners: false
+  read_gnb_positions_from_scene: true
+  small_object_keep_keywords: [rail, track, gnb, tx, antenna, sleeper, road, water]
+
+export:
+  max_obj_file_bytes: 30000000
+
+scene:
+  length_m: 3000.0
+  width_m: 520.0
+
+base_stations:
+  - name: GNB_A
+    output_name: mpc_gnb_a
+    position_m: [0.0, 0.0, 25.0]
+    facing: auto
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_B
+    output_name: mpc_gnb_b
+    position_m: [0.0, 0.0, 25.0]
+    facing: auto
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_C
+    output_name: mpc_gnb_c
+    position_m: [0.0, 0.0, 25.0]
+    facing: auto
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+  - name: GNB_D
+    output_name: mpc_gnb_d
+    position_m: [0.0, 0.0, 25.0]
+    facing: auto
+    height_m: 25.0
+    mast_radius_m: 0.25
+    antenna_size_m: [0.8, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 4.2
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 6
+  max_num_paths: 3000
+  samples_per_src: 3500
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: true
+  enable_diffraction: true
+  enable_edge_diffraction: true
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 75.0
+  max_paths_after_filter: 128
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+paths:
+  blend_file: output_hanoi_haiphong_osm_rt/Train_hanoi_haiphong_osm_sionna.blend
+  mitsuba_xml: output_hanoi_haiphong_osm_rt/scene.xml
+  mesh_dir: output_hanoi_haiphong_osm_rt/meshes
+  trace_csv: output_hanoi_haiphong_osm_rt/ns3_trace.csv
+  trace_csv_pattern: output_hanoi_haiphong_osm_rt/{station}.csv
+  trace_manifest: output_hanoi_haiphong_osm_rt/trace_manifest.json
+  doppler_plot: output_hanoi_haiphong_osm_rt/doppler_vs_time.png
+  doppler_plot_pattern: output_hanoi_haiphong_osm_rt/{station}_doppler_vs_time.png
+  path_count_plot: output_hanoi_haiphong_osm_rt/path_count_vs_time.png
+  path_count_plot_pattern: output_hanoi_haiphong_osm_rt/{station}_path_count_vs_time.png
+  scene_metadata: output_hanoi_haiphong_osm_rt/scene_metadata.json

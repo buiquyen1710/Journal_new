@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+*.log
+*.err
+*.tmp
+*.bak
+.venv/
+.idea/
+.vscode/
+
+# Generated scientific data and heavy scene assets are provenance-controlled,
+# not versioned in this source repository.
+output*/
+results/
+logs/
+checkpoints/
+*.blend
+*.blend1
+*.fbx
+*.obj
+*.ply
+*.stl
+*.osm
+*.hgt
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.csv
+*.parquet
+*.npy
+*.npz
+*.gz
+
+# Local/generated experiment payloads.
+phase1_pipeline/experiments/rt_resolution_sensitivity/trajectories/
+phase1_pipeline/experiments/rt_resolution_sensitivity/rt_outputs/
+phase1_pipeline/experiments/rt_resolution_sensitivity/ns3_inputs/
+phase1_pipeline/experiments/rt_resolution_sensitivity/ns3_results/

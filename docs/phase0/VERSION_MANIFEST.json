@@ -1,0 +1,32 @@
+{
+  "manifest_version": "1.0",
+  "audit_date": "2026-10-05",
+  "project_phase": "P0 baseline audit and scope lock",
+  "repository": "https://github.com/buiquyen1710/Journal_new.git",
+  "tag": "phase0-sionnart-baseline-v0.1.0",
+  "platform": {
+    "os": "Windows",
+    "python": "3.13.9",
+    "git": "2.50.1"
+  },
+  "runtime": {
+    "sionna": "source installation; distribution metadata unavailable",
+    "mitsuba": "3.8.0",
+    "drjit": "1.3.1",
+    "numpy": "2.1.2",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.6",
+    "pyyaml": "6.0.3"
+  },
+  "downstream_reference": {
+    "ns3": "3.44",
+    "five_g_lena": "NR-v4.0",
+    "source_commit": "cc25f66",
+    "note": "External downstream repository was dirty during audit and is not vendored here."
+  },
+  "known_limitations": [
+    "Sionna distribution version could not be obtained from package metadata.",
+    "Blender version was not captured by the existing baseline records.",
+    "A clean-environment full RT reproduction is still pending."
+  ]
+}

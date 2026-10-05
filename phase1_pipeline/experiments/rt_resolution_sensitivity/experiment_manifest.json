@@ -1,0 +1,72 @@
+{
+  "experiment": "rt_resolution_sensitivity",
+  "created_utc": "2026-08-24T07:35:00Z",
+  "scientific_question": "Whether the principal Event-A3 outage/mobility conclusions remain stable when native Sionna RT receiver sampling is substantially refined.",
+  "train_speed_kmh": 350.0,
+  "train_speed_mps": 97.22222222222221,
+  "carrier_frequency_hz": 30000000000.0,
+  "rt_seed": 42,
+  "python_sionna_runtime": "Python 3.13.9",
+  "sionna_version": "unreported_by_installed_source_package_no_distribution_metadata",
+  "mitsuba_version": "3.8.0",
+  "drjit_version": "1.3.1",
+  "resolutions_m": [25, 5, 2],
+  "scene_mapping": {
+    "E2": {
+      "scene_id": "do_thi_cau_song_LongBien-GiaLam",
+      "scene_class": "river crossing",
+      "source": "vietnam_railway_osm_scenes/scene_manifest.json"
+    },
+    "E6": {
+      "scene_id": "deo_nui_ven_bien_HaiVanBac-HaiVanNam",
+      "scene_class": "mountainous pass",
+      "source": "vietnam_railway_osm_scenes/scene_manifest.json"
+    }
+  },
+  "a3_operating_points": {
+    "aggressive": {"hom_db": 1, "ttt_ms": 40},
+    "balanced": {"hom_db": 3, "ttt_ms": 160},
+    "conservative": {"hom_db": 5, "ttt_ms": 320}
+  },
+  "outage_threshold_db": -6,
+  "pingpong_window_s": 1.0,
+  "measurement_interval_ms_reported": 50,
+  "measurement_interval_verified_in_code": true,
+  "measurement_interval_semantics": "Hard-coded 50-ms custom FixedA3 controller polling period; not demonstrated as a CLI-configurable PHY/L3 measurement-generation cadence.",
+  "auxiliary_measurement_test": "not_run_no_standards_consistent_configurable_cadence_found",
+  "a3_implementation": "FixedA3 custom A3-like controller, distinct from NativeA3",
+  "trace_replay_verified_in_code": true,
+  "trace_replay_semantics": "Controller: normalized polyline progress to rounded common timestamp index, then exact per-link lookup. PHY SioLENA: uniform timestep index over converted channel blocks.",
+  "baseline_policy": "Reuse legacy 25-m traces provisionally; reuse exact baseline XML/meshes/gNB metadata for all fine runs; never overwrite baseline.",
+  "resampling_policy": "Preserve every baseline trajectory vertex and subdivide each segment so actual spacing is no greater than the requested interval.",
+  "main_matrix_case_count": 18,
+  "ns3_workspace_expected": "~/siolena-src",
+  "ns3_source_archive_windows": "C:/Users/aselab/Downloads/siolena-src/siolena-src",
+  "ns3_workspace_accessible_from_windows": "read_only_source_and_historical_outputs; Linux runtime unavailable",
+  "ns3_version": "3.44",
+  "fiveg_lena_version": "NR-v4.0",
+  "ns3_git_commit": "cc25f66bfd2a0b27d1354a46da7796dadc93f5c9",
+  "ns3_git_state": "dirty; local trace-channel and other modifications recorded by git status",
+  "ns3_program": "scratch/railway-digital-twin-evaluation/railway-digital-twin-evaluation.cc",
+  "ns3_program_sha256": "7ee39efeef390b0b8628db1cdea610684a55e02b16c6615671e2c74b4ba526d3",
+  "ns3_binary": "build/scratch/railway-digital-twin-evaluation/ns3.44-railway-digital-twin-evaluation-default",
+  "ns3_binary_sha256": "d1e1cd48a5a02b3d386b8501676064d9508c0748c657bf778d6dbf8b898303b5",
+  "ns3_shared_library_count": 39,
+  "ns3_shared_library_aggregate_sha256": "aa325ac228ff665c6c3b3f21d94ead3f72e6f0350bba92ad9d60c5820e575453",
+  "local_wsl2_executor": {
+    "type": "docker-desktop-wsl2",
+    "distro": "docker-desktop",
+    "kernel": "Linux ASE 6.6.87.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Apr 21 17:08:54 UTC 2025 x86_64 Linux",
+    "loader_sha256": "1cd555ac46b7887edeaf3c42aac5408c8135e52f6b37870da2cf82d5fe14e829",
+    "system_runtime_file_count": 83,
+    "system_runtime_aggregate_sha256": "86aaa87e488b199f416bb5acc8cf06469de7f0f000c7a5fc100dc22c7b09ed6d",
+    "private_runtime_file_count": 5,
+    "private_runtime_aggregate_sha256": "341671312e84c3ab690f5f5765328fb6c9a4bb8cd7fc01cdfcce1e0ba02d6560",
+    "scope": "optional local executor; native Ubuntu/WSL2 handoff remains portable"
+  },
+  "ns3_rng_seed": 1,
+  "ns3_rng_run": 1,
+  "warmup_exclusion_s": 0.15,
+  "git_commit": null,
+  "git_note": "phase1_pipeline is not a Git worktree"
+}

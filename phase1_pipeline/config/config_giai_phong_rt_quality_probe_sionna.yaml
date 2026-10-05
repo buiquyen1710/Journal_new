@@ -1,0 +1,81 @@
+scenario:
+  type: external_loop_3000m
+  name: giai_phong_giap_bat_osm_rt_quality_probe
+
+base_stations:
+  - name: GNB_A
+    output_name: mpc_gnb_a
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+
+scene:
+  length_m: 2125.0
+  width_m: 520.0
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 4.3
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 120.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 4
+  max_num_paths: 1000
+  samples_per_src: 500
+  include_train_in_rt_scene: false
+  enable_refraction: false
+  enable_diffuse_reflection: true
+  enable_diffraction: false
+  enable_edge_diffraction: false
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 100.0
+  max_paths_after_filter: 128
+  require_sionna_backend: true
+  fallback_on_empty_sionna_paths: false
+  progress_interval_samples: 1
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+antenna:
+  tx_array:
+    num_rows: 8
+    num_cols: 4
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+  rx_array:
+    num_rows: 2
+    num_cols: 2
+    vertical_spacing: 0.5
+    horizontal_spacing: 0.5
+    pattern: tr38901
+    polarization: VH
+    polarization_model: tr38901_2
+
+paths:
+  blend_file: output_giai_phong_rt/Train_giai_phong_rt_sionna.blend
+  mitsuba_xml: output_giai_phong_rt_full_reduced/scene.xml
+  mesh_dir: output_giai_phong_rt_full_reduced/meshes
+  trace_csv: output_giai_phong_rt_quality_probe/ns3_trace.csv
+  trace_csv_pattern: output_giai_phong_rt_quality_probe/{station}.csv
+  trace_manifest: output_giai_phong_rt_quality_probe/trace_manifest.json
+  doppler_plot: output_giai_phong_rt_quality_probe/doppler_vs_time.png
+  doppler_plot_pattern: output_giai_phong_rt_quality_probe/{station}_doppler_vs_time.png
+  path_count_plot: output_giai_phong_rt_quality_probe/path_count_vs_time.png
+  path_count_plot_pattern: output_giai_phong_rt_quality_probe/{station}_path_count_vs_time.png
+  scene_metadata: output_giai_phong_rt_quality_probe/scene_metadata.json

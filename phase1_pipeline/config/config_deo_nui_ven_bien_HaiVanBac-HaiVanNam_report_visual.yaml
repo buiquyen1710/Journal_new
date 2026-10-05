@@ -1,0 +1,179 @@
+scenario:
+  type: external_loop_3000m
+  name: deo_nui_ven_bien_HaiVanBac-HaiVanNam_report_visual
+
+external_scene:
+  source_blend: C:/Users/asela/Documents/New project/SioNetRail_loop/phase1_pipeline/vietnam_railway_osm_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam.blend
+  trajectory_spacing_m: 25.0
+  read_gnb_positions_from_scene: true
+
+export:
+  max_obj_file_bytes: 120000000
+  skip_curve_objects: true
+  keep_curve_keywords: [RT_Rail]
+  skip_object_keywords: [RT_Sleeper, RT_Trajectory_Centerline]
+  corridor_clip_margin_m: 0.0
+  skip_object_area_below_m2: 0.0
+
+scene:
+  length_m: 0.0
+  width_m: 0.0
+
+base_stations:
+  - name: GNB_A
+    output_name: mpc_gnb_a
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_B
+    output_name: mpc_gnb_b
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_C
+    output_name: mpc_gnb_c
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_D
+    output_name: mpc_gnb_d
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_E
+    output_name: mpc_gnb_e
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_F
+    output_name: mpc_gnb_f
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_G
+    output_name: mpc_gnb_g
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_H
+    output_name: mpc_gnb_h
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_I
+    output_name: mpc_gnb_i
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_J
+    output_name: mpc_gnb_j
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_K
+    output_name: mpc_gnb_k
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_L
+    output_name: mpc_gnb_l
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_M
+    output_name: mpc_gnb_m
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+  - name: GNB_N
+    output_name: mpc_gnb_n
+    position_m: [0.0, 0.0, 30.0]
+    facing: y-
+    height_m: 30.0
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.28, 1.35]
+    ray_origin_clearance_m: 0.35
+
+train:
+  receiver_height_m: 4.2
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.4
+  body_height_m: 4.3
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 0.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 6
+  max_num_paths: 3000
+  samples_per_src: 1600
+  include_train_in_rt_scene: false
+  enable_refraction: true
+  enable_diffuse_reflection: true
+  enable_diffraction: true
+  enable_edge_diffraction: true
+  enable_diffraction_lit_region: false
+  synthetic_array: true
+  min_relative_path_gain_db: 110.0
+  max_paths_after_filter: 256
+  require_sionna_backend: true
+  fallback_on_empty_sionna_paths: false
+  skip_snapshot_visualizations: true
+  skip_station_validation_plots: true
+
+paths:
+  blend_file: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/Train_deo_nui_ven_bien_HaiVanBac-HaiVanNam_report_visual.blend
+  mitsuba_xml: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/scene.xml
+  mesh_dir: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/meshes
+  trace_csv: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/ns3_trace.csv
+  trace_csv_pattern: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/{station}.csv
+  trace_manifest: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/trace_manifest.json
+  doppler_plot: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/doppler_vs_time.png
+  doppler_plot_pattern: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/{station}_doppler_vs_time.png
+  path_count_plot: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/path_count_vs_time.png
+  path_count_plot_pattern: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/{station}_path_count_vs_time.png
+  scene_metadata: report_visual_sionna_scenes/deo_nui_ven_bien_HaiVanBac-HaiVanNam/scene_metadata.json

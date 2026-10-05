@@ -1,0 +1,83 @@
+scenario:
+  type: straight_tunnel
+  name: straight_tunnel
+
+scene:
+  length_m: 1000.0
+  width_m: 40.0
+
+tunnel:
+  length_m: 800.0
+  center_x_m: 0.0
+  inner_width_m: 10.0
+  inner_height_m: 7.5
+  wall_thickness_m: 0.35
+  material:
+    epsilon_r: 5.31
+    conductivity_s_per_m: 0.02
+
+railway:
+  gauge_m: 1.435
+  rail_height_m: 0.18
+  rail_width_m: 0.075
+  sleeper_spacing_m: 0.6
+  sleeper_dimensions_m: [2.6, 0.28, 0.16]
+
+noise_barriers:
+  center_offset_m: 5.0
+  height_m: 7.5
+  thickness_m: 0.35
+
+base_station:
+  name: west_portal_gnb
+  position_m: [-435.0, 0.0, 8.5]
+  facing: x+
+  height_m: 8.5
+  mast_radius_m: 0.22
+  antenna_size_m: [0.9, 0.25, 1.2]
+  ray_origin_clearance_m: 0.25
+
+portal_base_stations:
+  - name: east_portal_gnb
+    position_m: [435.0, 0.0, 8.5]
+    facing: x-
+    height_m: 8.5
+    mast_radius_m: 0.22
+    antenna_size_m: [0.9, 0.25, 1.2]
+    ray_origin_clearance_m: 0.25
+
+train:
+  receiver_height_m: 3.8
+  lateral_offset_m: 0.0
+  length_m: 25.0
+  width_m: 3.2
+  body_height_m: 3.6
+  nose_length_m: 4.0
+  bogie_offset_m: 7.0
+  wheel_radius_m: 0.42
+  wheel_width_m: 0.12
+  track_visual_offset_m: 0.7175
+
+simulation:
+  frequency_hz: 30000000000.0
+  train_speed_kmh: 350.0
+  timestep_s: 0.001
+  scene_margin_m: 20.0
+  duration_s:
+
+ray_tracing:
+  max_depth: 4
+  max_num_paths: 3000
+  samples_per_src: 2500
+  solver_timestep_s: 0.5
+  include_train_in_rt_scene: false
+  enable_refraction: false
+
+paths:
+  blend_file: output_tunnel/straight_tunnel_scene.blend
+  mitsuba_xml: output_tunnel/scene.xml
+  mesh_dir: output_tunnel/meshes
+  trace_csv: output_tunnel/ns3_trace.csv
+  doppler_plot: output_tunnel/doppler_vs_time.png
+  path_count_plot: output_tunnel/path_count_vs_time.png
+  scene_metadata: output_tunnel/scene_metadata.json
